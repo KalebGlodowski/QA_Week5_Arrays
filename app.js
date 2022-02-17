@@ -59,9 +59,9 @@ for (let i=0; i<warriors.length; i++){
         let damageEle = document.createElement("h3");
         let warriorEle = document.createElement("h3");
         nameEle.innerHTML=warriors[i].name;
-        healthEle.innerHTML=warriors[i].health;
-        damageEle.innerHTML=warriors[i].damage;
-        warriorEle.innerHTML=warriors[i].warrior;
+        healthEle.innerHTML="Health: "+warriors[i].health;
+        damageEle.innerHTML="Damage: "+warriors[i].damage;
+        warriorEle.innerHTML="Warrior: "+warriors[i].warrior;
         ele.appendChild(nameEle);
         ele.appendChild(healthEle);
         ele.appendChild(damageEle);
@@ -71,6 +71,10 @@ for (let i=0; i<warriors.length; i++){
             console.log(warriors[i].name[j]);
             if (warriors[i].name[j] === "a" || warriors[i].name[j] === "A") {
                 console.log("Found an A!");
+                nameEle.style.color="red";
+                healthEle.style.color="red";
+                damageEle.style.color="red";
+                warriorEle.style.color="red";
             }
         }
         document.body.appendChild(ele);
